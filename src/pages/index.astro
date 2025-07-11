@@ -1,18 +1,47 @@
 ---
 // Welcome to Astro! Everything between these triple-dash code fences
 // is your "component frontmatter". It never runs in the browser.
-console.log('This runs in your terminal, not the browser!');
+import Layout from '../components/Layout.astro';
+import Canvas from '../components/Canvas.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import HTMLSnippet from './test.html';
 ---
-<!-- Below is your "component template." It's just HTML, but with
-    some magic sprinkled in to help you build great templates. -->
-<html>
-  <body>
-    <h1>Hello, World!</h1>
-    Read more <a href="/about">about</a>.
-  </body>
-</html>
+<Layout title="test">
+  <main>
+    <Header/>
+    <Footer/>
+
+    test
+    <!-- <HTMLSnippet/> -->
+     <iframe id="viewer" name="viewer" src="./test.html" allow="fullscreen; xr-spacial-tracking"></iframe>
+    
+  </main>
+</Layout>
+
+<script>
+  const viewer = document.getElementById('viewer');
+</script>
+
 <style>
   h1 {
     color: orange;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body  {
+    overflow: hidden;
+  }
+
+  .webgl {
+      position: fixed;
+      top: 0;
+      left: 0;
+      outline: none;
   }
 </style>

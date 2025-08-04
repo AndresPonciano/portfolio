@@ -10,38 +10,28 @@ import HTMLSnippet from './test.html';
 <Layout title="test">
   <main>
     <Header/>
-    <Footer/>
 
-    test
-    <!-- <HTMLSnippet/> -->
-     <iframe id="viewer" name="viewer" src="./3d_work/koch_snowflake.html" allow="fullscreen; xr-spacial-tracking"></iframe>
-    
+    <div class="introduction_wrapper">
+      <div class="introduction">
+        <figure>
+          figure here
+        </figure>
+
+        <article>
+          idk some text here or something
+        </article>
+      </div>
+
+      <aside class="main-threejs-hurricane">
+      <iframe id="viewer" name="viewer" src="./3d_work/koch_snowflake.html" allow="fullscreen; xr-spacial-tracking"></iframe>
+      </aside>
+
+    </div>
+
+    <Footer/>
   </main>
 </Layout>
 
 <script>
   const viewer = document.getElementById('viewer');
 </script>
-
-<style>
-  h1 {
-    color: orange;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  html,
-  body  {
-    overflow: hidden;
-  }
-
-  .webgl {
-      position: fixed;
-      top: 0;
-      left: 0;
-      outline: none;
-  }
-</style>

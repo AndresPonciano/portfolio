@@ -1,0 +1,91 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html
+{
+    --brand-main: rgb(102, 135, 187);
+    box-sizing: border-box;
+}   
+
+body
+{
+    overflow: hidden;
+    font-size: 18px;
+    font-family: Libre Franklin, sans-serif;
+    color: #FFFF;
+    background-color: var(--brand-main);
+}
+
+/* NAV MODULES */
+.navbar {
+    border-bottom: #FFFF;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    /* height: 100%; */
+
+
+    /* max-width: 1080px; */
+    /* margin: 0 auto; */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    /* padding: 1rem; */
+}
+
+.nav-list > li {
+    /* not sure if this is doing anything */
+    margin-top: 0;
+}
+
+.nav-list > li > a {
+    display: block;
+    padding: .5em 1em;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* MAIN MODULES */
+main {
+    height: 100vh;
+    overflow: auto;
+    /* height: 100vh; */
+}
+
+header {
+    height: 10%;
+}
+
+/* subsection for the main hero type thing */
+.introduction_wrapper{
+    height: 90%;
+    display: flex;
+}
+
+.introduction {
+    width: 30%;
+}
+
+aside {
+    width: 70%;
+}
+
+footer {
+    height: 10%;
+}
